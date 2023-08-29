@@ -8,27 +8,36 @@ body {
     background-color: black;
 }
 
-.cont {
-    color: red;
-    font-size: 100px;
-    height: 200px;
-    text-align: center;
-    margin-top: 1   0px;
-    /* transform: ; */
-    /* transition: font- 700ms ease-in-out 2ms; */
-    animation: fontText 2s linear 1s ease-in-out alternate;
+.contanier {
+    max-width: 1366px;
+    height: 100vh;
+    margin: 0 auto;
+    border: 2px solid green;
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    /* gap: 10px; */
+    /* flex-wrap: wrap; */
+    /* flex: 1 1 0; */
 }
 
+.btnCon {
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-bottom: 15px;
+}
 .btn,
 .btn1 {
     width: 500px;
-    margin: 10px auto;
+    margin: 0px auto;
     /* height: 50px; */
-    margin-left: 100px;
+    /* margin-left: 100px; */
     font-size: 35px;
     text-align: center;
     background-color: pink;
     transition: all 700ms ease-in-out 2ms;
+    gap: 30px;
     /* animation: btnText 5s linear 2s infinite alternate; */
 }
 .btn:hover {
@@ -37,15 +46,25 @@ body {
     box-shadow: 10px 2px 30px 2px green;
     /* border-radius: 8%; */
 }
-.contanier {
-    max-width: 1366px;
-    height: 100vh;
-    margin: 0 auto;
-    border: 2px solid green;
+
+.boxCont {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    /* flex: 1 1 0; */
+}
+
+.cont {
+    color: red;
+    font-size: 100px;
+    height: 200px;
+    text-align: center;
+    margin-top: 1 0px;
+    /* transform: ; */
+    /* transition: font- 700ms ease-in-out 2ms; */
+    animation: fontText 2s linear 1s ease-in-out alternate;
 }
 
 .box {
@@ -85,5 +104,36 @@ body {
         transform: scale(3.1);
         opacity: 2.2;
         font-size: 100px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 1000px) {
+    .contanier {
+        width: auto;
+        height: auto;
+        border: 2px solid green;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        width: 150px;
+    }
+
+    .btn:hover {
+        width: 200px;
+    }
+
+    .box {
+        width: 120px;
+        gap: 10px;
+        /* height: 0px; */
+    }
+
+    .cont{
+        margin-top: 70px;
+        font-size: 50px;
     }
 }
