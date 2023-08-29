@@ -1,14 +1,13 @@
 var elm = document.querySelectorAll(".box");
-var turn, pattern;
+var turn = "",
+    pattern;
 
 function inputX(cont, elc) {
     var elmX = document.createElement("p");
     elmX.textContent = cont;
-    // elmX.style.color = "red";
-    // elmX.style.fontSize = "100px";
-    // elmX.style.margin = "10px";
-    setTimeout(() => elmX.classList.add("cont"), 50);
-    elc.appendChild(elmX);
+    elmX.classList.add("cont");
+    // , 50);
+    cont !== "" ? elc.appendChild(elmX) : false;
 }
 
 function data(p) {
@@ -56,7 +55,7 @@ function winner() {
                         );
 
                     //    location.reload();
-                }, 150);
+                }, 550);
                 isWinner = true;
             }
         }
@@ -74,21 +73,20 @@ function winner() {
             document
                 .querySelectorAll(".btn")
                 .forEach((btn) => btn.removeAttribute("disabled", true));
-        }, 500);
+        }, 700);
         return;
     }
 }
 
 function firstClick(disc) {
     alert("Select One Turn");
-    //    turn=
 }
 
 function changeTurn(c) {
     //    turn = false;
     //    turn ? data() : firstClick();
+    // if(turn)
     inputX(turn, c);
-    //    turn = turn === "0" ? "x" : "0" ;
     if (turn === "0") {
         turn = "x";
     } else if (turn === "x") {

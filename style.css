@@ -61,10 +61,12 @@ body {
     font-size: 100px;
     height: 200px;
     text-align: center;
-    margin-top: 1 0px;
+    /* margin-top: 1 0px; */
+    font-weight: 700;
+    /* opacity: 0.5; */
     /* transform: ; */
     /* transition: font- 700ms ease-in-out 2ms; */
-    animation: fontText 2s linear 1s ease-in-out alternate;
+    /* animation: fontText 2s linear 1s ease-in-out alternate; */
 }
 
 .box {
