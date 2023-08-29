@@ -69,15 +69,18 @@ function winner() {
 
     if (isEMpty && !isWinner) {
         setTimeout(() => {
-            alert("Draw");
+            alert(" Match Draw");
             emptyStr();
+            document
+                .querySelectorAll(".btn")
+                .forEach((btn) => btn.removeAttribute("disabled", true));
         }, 500);
         return;
     }
 }
 
 function firstClick(disc) {
-    alert("select one");
+    alert("Select One Turn");
     //    turn=
 }
 
@@ -91,7 +94,7 @@ function changeTurn(c) {
     } else if (turn === "x") {
         turn = "0";
     } else {
-        alert("select turn than start");
+        alert("Select turn than start");
         //   location.reload();
     }
 }
